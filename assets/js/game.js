@@ -15,3 +15,24 @@
     // score resets to 0
     // gems have new random value assigned
     // new target value created and displayed on page
+
+let wins = 0;
+let losses = 0;
+let score = 0;
+let pointTarget;
+let redGemValue;
+let greenGemValue;
+let blueGemValue;
+let purpleGemValue;
+let gemValue
+let win = false;
+let lose = false;
+
+// generate random number 1 - 10
+function randomValueGenerator(){
+    gemValue = Math.ceil(Math.random() * 10)
+    console.log(gemValue)
+}
+
+randomValueGenerator()
+
