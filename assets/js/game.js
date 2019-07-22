@@ -31,8 +31,37 @@ let lose = false;
 // generate random number 1 - 10
 function randomValueGenerator(){
     gemValue = Math.ceil(Math.random() * 10)
-    console.log(gemValue)
+    // console.log(gemValue)
 }
 
-randomValueGenerator()
+function redGemValueGenerator() {
+    randomValueGenerator()
+    redGemValue = gemValue;
+    console.log(`Red gem value = `,redGemValue)
+}
+
+function greenGemValueGenerator() {
+    randomValueGenerator()
+    greenGemValue = gemValue;
+    console.log(`Green gem value = `,greenGemValue)
+}
+
+function blueGemValueGenerator() {
+    randomValueGenerator()
+    blueGemValue = gemValue;
+    console.log(`blue gem value = `,blueGemValue)
+}
+
+function purpleGemValueGenerator() {
+    randomValueGenerator()
+    purpleGemValue = gemValue;
+    console.log(`purple gem value = `,purpleGemValue)
+}
+
+function gemValueAssignment() {
+    redGemValueGenerator()
+    greenGemValueGenerator()
+    blueGemValueGenerator()
+    purpleGemValueGenerator()
+}
 
