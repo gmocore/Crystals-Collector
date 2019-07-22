@@ -25,6 +25,7 @@ let greenGemValue;
 let blueGemValue;
 let purpleGemValue;
 let gemValue
+let points = 0;
 let win = false;
 let lose = false;
 
@@ -64,4 +65,70 @@ function gemValueAssignment() {
     blueGemValueGenerator()
     purpleGemValueGenerator()
 }
+
+function getRandomInt(min, max) {
+    pointTarget = Math.floor(Math.random() * (max - min + 1) + min);
+    console.log(pointTarget)
+    $('#target-points').text(pointTarget)
+  }
+
+  getRandomInt(19, 120)
+
+  gemValueAssignment()
+
+  function checkScore() {
+      if (points === pointTarget) {
+          wins++
+          $('.win-loss-text').text("You Win!")
+          $('#win-count').text(wins)
+          win = true
+          newgame()
+      }
+       if(points > pointTarget) {
+          losses++
+          $('.win-loss-text').text("You Lose!")
+          $('#loss-count').text(losses)
+          lose = true
+          newgame()
+      } 
+  }
+
+  function newgame() {
+      win = false
+      lose = false
+      points = 0
+      gemValueAssignment()
+  }
+
+  $('#red-gem').click(function(){
+      console.log('clicked')
+      points += redGemValue
+      $('#score-count').text(points)
+      checkScore()
+  })
+
+  $('#green-gem').click(function(){
+      console.log('clicked')
+      points += greenGemValue
+      $('#score-count').text(points)
+      checkScore()
+
+  })
+
+  $('#blue-gem').click(function(){
+      console.log('clicked')
+      points += blueGemValue
+      $('#score-count').text(points)
+      checkScore()
+
+  })
+
+  $('#purple-gem').click(function(){
+      console.log('clicked')
+      points += purpleGemValue
+      $('#score-count').text(points)
+      checkScore()
+
+  })
+
 
