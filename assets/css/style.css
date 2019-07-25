@@ -1,15 +1,95 @@
+body {
+  font-family: "Didact Gothic", sans-serif;
+  background-color: #39393a;
+  color: #d1c6ad;
+  letter-spacing: 3px;
+}
+
+.title {
+  font-size: 5em;
+  padding: 15px;
+  letter-spacing: 5px;
+  text-align: center;
+  background-color: #466365;
+  border-bottom: #d1c6ad 1px solid;
+  text-shadow: -1px -1px 0 #39393a, 1px -1px 0 #39393a, -1px 1px 0 #39393a,
+    1px 1px 0 #39393a;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+.instructions p {
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.target-display {
+  font-size: 2em;
+  margin-top: 3%;
+  text-align: center;
+  line-height: 50px;
+}
+
+#target-points,
+#win-count {
+  color: #949d6a;
+}
+
+#loss-count {
+  color: #ee6352;
+}
+
+.win-loss-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  font-size: 1.5em;
+}
+
+.gem-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.far {
+  padding: 5px;
+  cursor: pointer;
+  text-shadow: #d1c6ad 0.5px 0.5px;
+  transition: 0.5s;
+}
+
+.far:hover {
+  text-shadow: #d1c6ad 2px 2px;
+}
+
 #red-gem {
-    color: red;
+  color: red;
 }
 
 #green-gem {
-    color: green;
+  color: green;
 }
 
 #blue-gem {
-    color: blue;
+  color: blue;
 }
 
 #purple-gem {
-    color: purple;
+  color: purple;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+  font-size: 2em;
+  line-height: 50px;
+}
+
+#score-count {
+  color: #9cafb7;
 }
